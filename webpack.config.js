@@ -3,8 +3,8 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     entry: [
-  
-        "./src/index.js"
+        "webpack-dev-server/client?http://localhost:8080",       
+        "./src/index.js",
     ],
 
     output: {
@@ -21,7 +21,7 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
     },
-  
+
     plugins: [
         new HTMLWebpackPlugin({
             template: "src/index.html",
