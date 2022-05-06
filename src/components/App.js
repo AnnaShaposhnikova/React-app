@@ -5,7 +5,7 @@ import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 import { HomePage } from "./HomePage";
 import PopularPage  from "./popular/PopularPage";
-import { BattlePage } from "./BattlePage";
+import { BattlePage } from "./battle/BattlePage";
 
 export const App = () => {
     return (
