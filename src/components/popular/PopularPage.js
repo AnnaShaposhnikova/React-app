@@ -26,10 +26,7 @@ export default class PopularPage extends React.Component {
             this.fetchHandler(language);
         }
     }
-    shouldComponentUpdate(){
-        
-    }
-       
+         
 
     fetchHandler(language) {
         FetchPopularRepos(language)
@@ -53,31 +50,15 @@ export default class PopularPage extends React.Component {
         if (this.state.error) {
             return <h1>{this.state.error}</h1>;
         }
-
-           return (
-            <div>
-                <SelectedLanguages
-                    selectedLanguage={this.state.selectedLanguage}
-                    selectLanguageHandler={this.state.repos ? this.selectLanguage : <Spinner />}                   
-                />
-                <Repos repos={this.state.repos} />
-            </div>
-        ) 
-
-        // if(this.state.repos){
-        //    return (
-        //     <div>
-        //         <SelectedLanguages
-        //             selectedLanguage={this.state.selectedLanguage}
-        //             selectLanguageHandler={this.selectLanguage}                   
-        //         />
-        //         <Repos repos={this.state.repos} />
-        //     </div>
-        // ) 
-        // }else{
-        //     return <Spinner />
-        // }
-
        
+             return (
+                 <div>
+                     <SelectedLanguages
+                         selectedLanguage={this.state.selectedLanguage}
+                         selectLanguageHandler={this.selectLanguage}
+                     />
+                     <Repos repos={this.state.repos} />
+                 </div>
+             );        
     }
 }
