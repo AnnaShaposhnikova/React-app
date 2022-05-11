@@ -2,7 +2,7 @@ import React from "react";
 import { FetchPopularRepos } from "../../utils/api";
 import { SelectedLanguages } from "./SelectedLanguages";
 import { Repos } from "./Repos";
-import { Spinner } from "../spinner/Spinner";
+
 
 
 export default class PopularPage extends React.Component {
@@ -21,12 +21,11 @@ export default class PopularPage extends React.Component {
     }
 
     selectLanguage(language) {
-        if (language !== this.state.selectedLanguage) {
+        if (language !== this.state.selectedLanguage && this.state.repos) {
             this.setState({ selectedLanguage: language, repos: null });
             this.fetchHandler(language);
         }
-    }
-         
+    }         
 
     fetchHandler(language) {
         FetchPopularRepos(language)
