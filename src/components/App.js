@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 import { HomePage } from "./HomePage";
-import PopularPage  from "./popular/PopularPage";
+import { PopularPage } from "./popular/PopularPage";
+
 import { BattlePage } from "./battle/BattlePage";
 
 export const App = () => {
@@ -16,9 +17,17 @@ export const App = () => {
                 <div className="content">
                     <div className="container">
                         <Switch>
-                            <Route exact path="/" component = {HomePage} />                           
-                            <Route exact path="/popular" component = {PopularPage} />                         
-                            <Route exact path="/battle" component = {BattlePage} />                          
+                            <Route exact path="/" component={HomePage} />
+                            <Route
+                                exact
+                                path="/popular"
+                                component={PopularPage}
+                            />
+                            <Route
+                                exact
+                                path="/battle"
+                                component={BattlePage}
+                            />
                             <Route
                                 render={() => {
                                     return (

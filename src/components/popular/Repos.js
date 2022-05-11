@@ -2,9 +2,7 @@ import React, { memo } from "react";
 import { Spinner } from "../spinner/Spinner";
 
 export const Repos = memo(({ repos }) => {
-    console.log("repos render");
     if (!repos) {
-        console.log("spinner");
         return <Spinner />;
     } else {
         return (
