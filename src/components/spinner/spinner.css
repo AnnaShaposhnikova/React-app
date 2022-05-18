@@ -1,4 +1,4 @@
-.spinner-wrapper{
+.spinner-wrapper {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -9,7 +9,7 @@
     height: 80px;
     position: relative;
     color: official;
-    display: inline-block;    
+    display: inline-block;
 }
 
 .spinner-item {

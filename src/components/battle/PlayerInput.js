@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const PlayerInput = ({ id, label, onSubmit }) => {
+export const PlayerInput = ({ id, label, onSubmit }) => {
     const [username, setUsername] = useState("");
 
     const handleChange = (event) => {
@@ -31,5 +31,3 @@ const PlayerInput = ({ id, label, onSubmit }) => {
         </form>
     );
 };
-
-export default PlayerInput;

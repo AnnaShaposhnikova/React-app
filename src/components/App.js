@@ -1,12 +1,12 @@
 import React from "react";
-import { render } from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 import { HomePage } from "./HomePage";
 import { PopularPage } from "./popular/PopularPage";
 
-import { BattlePage } from "./battle/BattlePage";
+import  BattlePage  from "./battle/BattlePage";
+import { Results } from "./battle/Results";
 
 export const App = () => {
     return (
@@ -27,6 +27,11 @@ export const App = () => {
                                 exact
                                 path="/battle"
                                 component={BattlePage}
+                            />
+                            <Route
+                                exact
+                                path="/battle/results"
+                                component={Results}
                             />
                             <Route
                                 render={() => {

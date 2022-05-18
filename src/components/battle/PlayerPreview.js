@@ -1,6 +1,6 @@
 import React from "react";
 
-const PlayerPreview = ({ username, avatar, children }) => {
+export const PlayerPreview = ({ username, avatar, children }) => {
     return (
         <div>
             <div className="column">
@@ -11,5 +11,3 @@ const PlayerPreview = ({ username, avatar, children }) => {
         </div>
     );
 };
-
-export default PlayerPreview;
